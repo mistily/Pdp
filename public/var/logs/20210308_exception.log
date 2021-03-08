@@ -1,0 +1,1 @@
+*ERROR* 	v1.7.7.2	2021/03/08 - 06:12:36: Table &#039;pspdb.ps_products&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;DESCRIBE ps_products&lt;/pre&gt; at line 769 in file classes/db/Db.php
