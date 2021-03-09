@@ -9,11 +9,7 @@ SetEnv HTTP_MOD_REWRITE On
 
 RewriteEngine on
 
-
-RewriteRule ^api -
-
-RewriteCond %{REQUEST_URI} !^/api
-RewriteRule ^(.*)$ ^/module/shopwebserviceapi/api?z=$1
+RewriteRule ^/module/shopwebserviceapi/api(.*)$ ^/module/shopwebserviceapi/api?z=$1 [PT,L]
 
 
 

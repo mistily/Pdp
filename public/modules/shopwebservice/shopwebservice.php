@@ -33,7 +33,9 @@ function loadFiles($folder) {
     $fs = scandir(getcwd() . '/modules/shopwebservice/' . $folder);
     unset($fs[0]);unset($fs[1]);
     foreach ($fs as $key => $value) {
-      include getcwd() . '/modules/shopwebservice/' . $folder . '/' . $value;
+      if(!is_dir(getcwd() . '/modules/shopwebservice/' . $folder . '/' . $value)) {
+        include getcwd() . '/modules/shopwebservice/' . $folder . '/' . $value;
+      }
     }
   } catch(Error $e) {
     echo json_encode($e->getMessage());
@@ -42,6 +44,7 @@ function loadFiles($folder) {
 }
 
 loadFiles('models');
+loadFiles('classes/parents');
 loadFiles('classes');
 #loadFiles('controllers');
 

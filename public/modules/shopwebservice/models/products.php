@@ -15,7 +15,7 @@ class ProductsModel {
 
   function getProductById(int $id) {
     $sql = 'SELECT * FROM ' . _DB_PREFIX_;
-    $sql .= 'product WHERE id=' . $id;
+    $sql .= 'product WHERE id_product=' . $id;
     return Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
   }
 }
