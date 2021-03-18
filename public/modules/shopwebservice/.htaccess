@@ -1,0 +1,3 @@
+RewriteEngine on
+
+RewriteRule ^/module/shopwebserviceapi/api/(.*)?$ ^/module/shopwebserviceapi/api?z=$1 [NC, L, QSA]
