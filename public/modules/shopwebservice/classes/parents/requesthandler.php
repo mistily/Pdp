@@ -6,14 +6,33 @@ namespace PrestaShop\Modules\ShopWebService\Classes\Parents;
 abstract class RequestHandler {
 
   var $__catvals = null;
+  var $catmap = null;
 
-  function __construct(array $route = null) {
-    if($route!==null) {
-      $this->createRouteStruct($route);
-    }
+    /**
+     * RequestHandler constructor.
+     * @param array|null $route
+     */
+    function __construct(array $route = null) {
+        if($route!==null) {
+          $this->createRouteStruct($route);
+        }
+        $this->catmap = [
+            'product' => 'Product',
+            'category' => 'Category',
+            'supplier' => 'Supplier',
+            'stock' => 'Stock',
+            'order' => 'Order',
+            'customer' => 'Customer',
+            'carrier' => 'Carrier'
+        ];
   }
 
-  private function checkApiKey(string $key = null) {
+    /**
+     * @param string|null $key
+     * @return bool
+     */
+    private function checkApiKey(string $key = null): bool
+  {
     if(!empty($key)) {
         if($key==='SQKCNVZGA67ZY7CTPZQ7GDLJXHCLPTAX') {
           return true;
@@ -25,8 +44,16 @@ abstract class RequestHandler {
     }
   }
 
-  public abstract function handleRoute(array $route = null);
+    /**
+     * @param array|null $route
+     * @return mixed
+     */
+    public abstract function handleRoute(array $route = null);
 
-  public abstract function createRouteStruct(array $route);
+    /**
+     * @param array $route
+     * @return mixed
+     */
+    protected abstract function createRouteStruct(array $route);
 
 }

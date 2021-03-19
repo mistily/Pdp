@@ -4,48 +4,53 @@ namespace PrestaShop\Modules\ShopWebService\Classes;
 
 use PrestaShop\Modules\ShopWebService\Classes\Parents\RequestHandler;
 use PrestaShop\Modules\ShopWebService\Models\ProductsModel;
+use PrestaShop\Modules\ShopWebService\Models\CategoryModel;
+use PrestaShop\Modules\ShopWebService\Models\CarrierModel;
+use PrestaShop\Modules\ShopWebService\Models\CustomerModel;
+use PrestaShop\Modules\ShopWebService\Models\DeliveryModel;
+use PrestaShop\Modules\ShopWebService\Models\OrderModel;
+use PrestaShop\Modules\ShopWebService\Models\StockModel;
+use PrestaShop\Modules\ShopWebService\Models\SupplierModel;
 
 class GetHandler extends RequestHandler{
 
   var $__catvals = null;
 
-  function __construct(array $route = null) {
-    if($route!==null) {
-      $this->createRouteStruct($route);
+    /**
+     * GetHandler constructor.
+     * @param array|null $route
+     */
+    function __construct(array $route = null) {
+        if($route!==null) {
+          $this->createRouteStruct($route);
+        }
     }
-  }
 
-  function handleRoute(array $route = null) {
-    $resp = null;
-    if(!empty($route)) {
-      $this->createRouteStruct($route);
+    /**
+     * @param array|null $route
+     * @return array
+     */
+    function handleRoute(array $route = null) {
+        $resp = null;
+        if(!empty($route)) {
+          $this->createRouteStruct($route);
+        }
+        foreach ($this->__catvals as $key => $value) {
+            if(isset($this->catmap[$value[0]])) {
+                $resp[] = $this->getValues($value,
+                    $this->catmap[$value[0]]);
+            } else {
+                $resp[] = array("Request error!"=>
+                    "Request was not understood!");
+            }
+        }
+        return $resp;
     }
-    foreach ($this->__catvals as $key => $value) {
-      switch ($value[0]) {
-        case 'product':
-          $resp[] = $this->getValues($value,'Product');
-          break;
-        case 'carrier':
-          $resp[] = $this->getValues($value,'Carrier');
-          break;
-        case 'order':
-          $resp[] = $this->getValues($value, 'Order');
-          break;
-        case 'supplier':
-          $resp[] = $this->getValues($value, 'Supplier');
-          break;
-        case 'category':
-          $resp[] = $this->getValues($value, 'Categorie');
-          break;
-        default:
-          $resp[] = array("Request error!"=>"Request was not understood!");
-          break;
-      }
-    }
-    return $resp;
-  }
 
-  public function createRouteStruct(array $route) {
+    /**
+     * @param array $route
+     */
+    public function createRouteStruct(array $route) {
     if(is_array($route)) {
       foreach ($route as $key => $value) {
         if(!empty($value)) {
@@ -56,7 +61,12 @@ class GetHandler extends RequestHandler{
   }
 
 
-  private function getValues($value, $type) {
+    /**
+     * @param $value
+     * @param $type
+     * @return array|string[]
+     */
+    private function getValues($value, $type) {
     $cval = "PrestaShop\\Modules\\ShopWebService\\Models\\" . $type . "sModel";
     $p = new $cval();
 
