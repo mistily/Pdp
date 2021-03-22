@@ -96,8 +96,6 @@ class PatchHandler extends RequestHandler{
         $cls = new $tstr();
         $tstr = 'update';
         $tstr .= ucfirst(strtolower($this->__catvals[0][0]));
-        return $cls->$tstr($this->__catvals[0][1],$putvals);
+        return $cls->$tstr($this->__catvals[0][1], $putvals);
     }
-
-
 }

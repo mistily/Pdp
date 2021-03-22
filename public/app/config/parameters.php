@@ -5,7 +5,11 @@
     'database_port' => '',
     'database_name' => 'pspdb',
     'database_user' => 'phpmyadmin',
+<<<<<<< HEAD
     'database_password' => 'krimb4D',
+=======
+    'database_password' => 'rootPassX9!',
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
     'database_prefix' => 'ps_',
     'database_engine' => 'InnoDB',
     'mailer_transport' => 'smtp',

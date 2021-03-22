@@ -337,7 +337,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
 
         $a->setSQLLogger($b);
 
+<<<<<<< HEAD
         return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => '', 'dbname' => 'pspdb', 'user' => 'phpmyadmin', 'password' => 'krimb4D', 'charset' => 'utf8mb4', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'defaultTableOptions' => []], $a, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
+=======
+        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => '', 'dbname' => 'pspdb', 'user' => 'phpmyadmin', 'password' => 'rootPassX9!', 'charset' => 'utf8mb4', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'defaultTableOptions' => []], $a, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
     }
 
     /**
@@ -352,10 +356,17 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $b = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
 
         $c = ${($_ = isset($this->services['annotation_reader']) ? $this->services['annotation_reader'] : ($this->services['annotation_reader'] = new \Doctrine\Common\Annotations\AnnotationReader())) && false ?: '_'};
+<<<<<<< HEAD
         $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/beata/PhpstormProjects/pdp/public/modules/productcomments/src/Entity']);
         $d->addExcludePaths([0 => '/home/beata/PhpstormProjects/pdp/public/modules/productcomments/src/Entity/index.php']);
 
         $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/beata/PhpstormProjects/pdp/public/src/PrestaShopBundle/Entity']), 'PrestaShop');
+=======
+        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/media/andras/HD710 PRO/Presta/pdp/public/modules/productcomments/src/Entity']);
+        $d->addExcludePaths([0 => '/media/andras/HD710 PRO/Presta/pdp/public/modules/productcomments/src/Entity/index.php']);
+
+        $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/media/andras/HD710 PRO/Presta/pdp/public/src/PrestaShopBundle/Entity']), 'PrestaShop');
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
         $b->addDriver($d, 'PrestaShop\\Module\\ProductComment\\Entity');
 
         $a->setEntityNamespaces(['PrestaShopBundle\\Entity' => 'PrestaShop']);
@@ -363,7 +374,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $a->setQueryCacheImpl(${($_ = isset($this->services['doctrine.orm.cache.provider.cache.doctrine.orm.default.query']) ? $this->services['doctrine.orm.cache.provider.cache.doctrine.orm.default.query'] : $this->getDoctrine_Orm_Cache_Provider_Cache_Doctrine_Orm_Default_QueryService()) && false ?: '_'});
         $a->setResultCacheImpl(${($_ = isset($this->services['doctrine.orm.cache.provider.cache.doctrine.orm.default.result']) ? $this->services['doctrine.orm.cache.provider.cache.doctrine.orm.default.result'] : $this->getDoctrine_Orm_Cache_Provider_Cache_Doctrine_Orm_Default_ResultService()) && false ?: '_'});
         $a->setMetadataDriverImpl($b);
+<<<<<<< HEAD
         $a->setProxyDir('/home/beata/PhpstormProjects/pdp/public/var/cache/dev//doctrine/orm/Proxies');
+=======
+        $a->setProxyDir('/media/andras/HD710 PRO/Presta/pdp/public/var/cache/dev//doctrine/orm/Proxies');
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
         $a->setProxyNamespace('Proxies');
         $a->setAutoGenerateProxyClasses(true);
         $a->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
@@ -539,7 +554,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Core_Localization_Cldr_Cache_AdapterService()
     {
+<<<<<<< HEAD
         return $this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/home/beata/PhpstormProjects/pdp/public/var/cache/dev//localization');
+=======
+        return $this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/media/andras/HD710 PRO/Presta/pdp/public/var/cache/dev//localization');
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
     }
 
     /**
@@ -549,7 +568,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Core_Localization_Cldr_Datalayer_LocaleCacheService()
     {
+<<<<<<< HEAD
         $this->services['prestashop.core.localization.cldr.datalayer.locale_cache'] = $instance = new \PrestaShop\PrestaShop\Core\Localization\CLDR\DataLayer\LocaleCache(${($_ = isset($this->services['prestashop.core.localization.cldr.cache.adapter']) ? $this->services['prestashop.core.localization.cldr.cache.adapter'] : ($this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/home/beata/PhpstormProjects/pdp/public/var/cache/dev//localization'))) && false ?: '_'});
+=======
+        $this->services['prestashop.core.localization.cldr.datalayer.locale_cache'] = $instance = new \PrestaShop\PrestaShop\Core\Localization\CLDR\DataLayer\LocaleCache(${($_ = isset($this->services['prestashop.core.localization.cldr.cache.adapter']) ? $this->services['prestashop.core.localization.cldr.cache.adapter'] : ($this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/media/andras/HD710 PRO/Presta/pdp/public/var/cache/dev//localization'))) && false ?: '_'});
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
 
         $instance->setLowerLayer(${($_ = isset($this->services['prestashop.core.localization.cldr.datalayer.locale_reference']) ? $this->services['prestashop.core.localization.cldr.datalayer.locale_reference'] : $this->getPrestashop_Core_Localization_Cldr_Datalayer_LocaleReferenceService()) && false ?: '_'});
 
@@ -1320,7 +1343,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'database_port' => '',
             'database_name' => 'pspdb',
             'database_user' => 'phpmyadmin',
+<<<<<<< HEAD
             'database_password' => 'krimb4D',
+=======
+            'database_password' => 'rootPassX9!',
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
             'database_prefix' => 'ps_',
             'database_engine' => 'InnoDB',
             'mailer_transport' => 'smtp',
@@ -1340,12 +1367,21 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'kernel.bundles' => [
 
             ],
+<<<<<<< HEAD
             'kernel.root_dir' => '/home/beata/PhpstormProjects/pdp/public/app',
             'kernel.project_dir' => '/home/beata/PhpstormProjects/pdp/public',
             'kernel.name' => 'app',
             'kernel.debug' => true,
             'kernel.environment' => 'dev',
             'kernel.cache_dir' => '/home/beata/PhpstormProjects/pdp/public/var/cache/dev/',
+=======
+            'kernel.root_dir' => '/media/andras/HD710 PRO/Presta/pdp/public/app',
+            'kernel.project_dir' => '/media/andras/HD710 PRO/Presta/pdp/public',
+            'kernel.name' => 'app',
+            'kernel.debug' => true,
+            'kernel.environment' => 'dev',
+            'kernel.cache_dir' => '/media/andras/HD710 PRO/Presta/pdp/public/var/cache/dev/',
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
             'kernel.active_modules' => [
                 0 => 'contactform',
                 1 => 'dashactivity',
@@ -1412,7 +1448,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 62 => 'ps_facetedsearch',
                 63 => 'ShopWebService',
             ],
+<<<<<<< HEAD
             'ps_cache_dir' => '/home/beata/PhpstormProjects/pdp/public/var/cache/dev/',
+=======
+            'ps_cache_dir' => '/media/andras/HD710 PRO/Presta/pdp/public/var/cache/dev/',
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
             'mail_themes_uri' => '/mails/themes',
             'doctrine_cache.apc.class' => 'Doctrine\\Common\\Cache\\ApcCache',
             'doctrine_cache.apcu.class' => 'Doctrine\\Common\\Cache\\ApcuCache',
@@ -1523,7 +1563,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'doctrine.orm.second_level_cache.cache_configuration.class' => 'Doctrine\\ORM\\Cache\\CacheConfiguration',
             'doctrine.orm.second_level_cache.regions_configuration.class' => 'Doctrine\\ORM\\Cache\\RegionsConfiguration',
             'doctrine.orm.auto_generate_proxy_classes' => true,
+<<<<<<< HEAD
             'doctrine.orm.proxy_dir' => '/home/beata/PhpstormProjects/pdp/public/var/cache/dev//doctrine/orm/Proxies',
+=======
+            'doctrine.orm.proxy_dir' => '/media/andras/HD710 PRO/Presta/pdp/public/var/cache/dev//doctrine/orm/Proxies',
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
             'doctrine.orm.proxy_namespace' => 'Proxies',
         ];
     }

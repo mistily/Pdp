@@ -33,6 +33,7 @@ af4345,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/noti
 408475,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/notifications?_token=6cKL45zeLRJDZO5aTnpb1_Zuks-QKAM9WV3BjTLdaXQ&rand=1614933828588,1614933832,,200
 8364ce,127.0.0.1,GET,http://localhost:8000/admin041uurtnw/index.php/configure/advanced/performance/?_token=6cKL45zeLRJDZO5aTnpb1_Zuks-QKAM9WV3BjTLdaXQ,1614947025,,302
 feaec0,127.0.0.1,GET,http://localhost:8000/admin041uurtnw/index.php/security/compromised?_token=uJGRf6UQHD7t5WWU06ctD_bHnMKGQltUm-cBc9YehYM&uri=http%253A%252F%252Flocalhost%253A8000%252Fadmin041uurtnw%252Findex.php%252Fconfigure%252Fadvanced%252Fperformance%252F%253F,1614947033,,200
+<<<<<<< HEAD
 6b50bf,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/notifications?_token=JppS6ssMGt6CQCqz8lREsUO_eTafqBfSKi5fWAcluXM&rand=1615461355666,1615461362,,200
 4e38fa,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/configure/advanced/employees/toggle-navigation?_token=JppS6ssMGt6CQCqz8lREsUO_eTafqBfSKi5fWAcluXM,1615461411,,204
 1db2e6,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/configure/advanced/employees/toggle-navigation?_token=JppS6ssMGt6CQCqz8lREsUO_eTafqBfSKi5fWAcluXM,1615461412,,204
@@ -102,3 +103,5 @@ e14038,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/noti
 a890bc,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/notifications?_token=JppS6ssMGt6CQCqz8lREsUO_eTafqBfSKi5fWAcluXM&rand=1615464665364,1615464665,,200
 7bcc4e,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/notifications?_token=JppS6ssMGt6CQCqz8lREsUO_eTafqBfSKi5fWAcluXM&rand=1615464784853,1615464786,,200
 9175ee,127.0.0.1,POST,http://localhost:8000/admin041uurtnw/index.php/common/notifications?_token=JppS6ssMGt6CQCqz8lREsUO_eTafqBfSKi5fWAcluXM&rand=1615464786855,1615464787,,200
+=======
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325

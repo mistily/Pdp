@@ -1,3 +1,10 @@
 index:
     path: /
     controller: App\Controller\HomeController::index
+<<<<<<< HEAD
+=======
+
+app_inventory_controller:
+  path: /inventory/
+  controller: App\Controller\InventoryController::number
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325

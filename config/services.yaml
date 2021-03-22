@@ -29,3 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+<<<<<<< HEAD
+=======
+    shopwebservice\controllers\ServiceMainController:
+    class: shopwebservice\controllers\ServiceMainController
+    arguments:
+      - '@doctrine.cache.provider'
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",
@@ -94,5 +95,14 @@
             "allow-contrib": false,
             "require": "5.2.*"
         }
+=======
+    "require": {
+        "prestashop/prestashop-webservice-lib": "dev-master"
+    },
+    "autoload": {
+        "files": [
+            "vendor/prestaShop/prestaShop-webservice-lib/PSWebServiceLibrary.php"
+        ]
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
     }
 }

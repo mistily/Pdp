@@ -95,8 +95,13 @@ class EntityMapper
                 }
                 $entity->id = (int) $id;
                 foreach ($object_datas as $key => $value) {
+<<<<<<< HEAD
                     if (array_key_exists($key,$entity_defs['fields'])
                         ||  array_key_exists($key,$entity)) {
+=======
+                    if (array_key_exists($key, $entity_defs['fields'])
+                        || array_key_exists($key, $entity)) {
+>>>>>>> 34ef086b1d4530876b21ac779dd9524872fb6325
                         $entity->{$key} = $value;
                     } else {
                         unset($object_datas[$key]);
